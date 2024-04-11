@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: santander-dev-week-2024
+  datasource:
+    url: jdbc:h2:mem:sdw24
+    driver-class-name: org.h2.Driver
+    username: devjag.linux
+    password: 1969
+  h2:
+    console:
+      enabled: true
+
+generative-ai:
+  provider: ${GENERATIVE_AI_PROVIDER:GEMINI}
+
+gemini:
+  base-url: https://generativelanguage.googleapis.com
+  api-key: ${GEMINI_API_KEY}
+
+#generative-ai:
+  #provider: ${GENERATIVE_AI_PROVIDER:OPENAI}
+
+#openai:
+  #base-url: https://api.openai.com
+  #api-key: ${OPENAI_API_KEY}
+
+server:
+  port: 5000
+
+
+
